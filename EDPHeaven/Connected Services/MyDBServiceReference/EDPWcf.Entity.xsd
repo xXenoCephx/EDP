@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EDPWcf.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EDPWcf.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfOutlet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Outlet" nillable="true" type="tns:Outlet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOutlet" nillable="true" type="tns:ArrayOfOutlet" />
+  <xs:complexType name="Outlet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OutletDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutletEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutletImg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutletName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Outlet" nillable="true" type="tns:Outlet" />
+  <xs:complexType name="ArrayOfOutletItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OutletItem" nillable="true" type="tns:OutletItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOutletItem" nillable="true" type="tns:ArrayOfOutletItem" />
+  <xs:complexType name="OutletItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsRecommend" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemOutletId" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemPrice" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutletItem" nillable="true" type="tns:OutletItem" />
+</xs:schema>
